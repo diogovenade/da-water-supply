@@ -1,0 +1,95 @@
+\doxysection{Graph Class Reference}
+\hypertarget{class_graph}{}\label{class_graph}\index{Graph@{Graph}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_graph_a04b6f7bf51526a60b0c071375a244774}\label{class_graph_a04b6f7bf51526a60b0c071375a244774} 
+\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} {\bfseries find\+Vertex} (const std\+::string \&code) const
+\item 
+\Hypertarget{class_graph_acbf357c61ced3d3c3a3cd519be925428}\label{class_graph_acbf357c61ced3d3c3a3cd519be925428} 
+bool {\bfseries add\+Vertex} (\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}vertex)
+\item 
+\Hypertarget{class_graph_a2e8e859215d647af95fcdb83fa0b26fa}\label{class_graph_a2e8e859215d647af95fcdb83fa0b26fa} 
+bool {\bfseries remove\+Vertex} (const std\+::string code)
+\item 
+\Hypertarget{class_graph_a15d05994d303618fd6e8c1e64de51e6f}\label{class_graph_a15d05994d303618fd6e8c1e64de51e6f} 
+bool {\bfseries add\+Edge} (const std\+::string \&source, const std\+::string \&dest, int capacity)
+\item 
+\Hypertarget{class_graph_a22e4dba58104715ffc8f704828868c3e}\label{class_graph_a22e4dba58104715ffc8f704828868c3e} 
+bool {\bfseries remove\+Edge} (const std\+::string \&source, const std\+::string \&dest)
+\item 
+\Hypertarget{class_graph_afb60568f20604d1c37bece7491d42d9a}\label{class_graph_afb60568f20604d1c37bece7491d42d9a} 
+bool {\bfseries add\+Bidirectional\+Edge} (const std\+::string \&source, const std\+::string \&dest, int capacity)
+\item 
+\Hypertarget{class_graph_abb5e0517e2979c54eebdafc2a9875e8f}\label{class_graph_abb5e0517e2979c54eebdafc2a9875e8f} 
+int {\bfseries get\+Num\+Vertex} () const
+\item 
+\Hypertarget{class_graph_a619ac583094079134074658e29463c0e}\label{class_graph_a619ac583094079134074658e29463c0e} 
+std\+::vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+Vertex\+Set} () const
+\item 
+\Hypertarget{class_graph_a7786b5ae94b9585d56a81cd6a57193c9}\label{class_graph_a7786b5ae94b9585d56a81cd6a57193c9} 
+double {\bfseries get\+Max\+Flow} () const
+\item 
+\Hypertarget{class_graph_aff4d55ba6709d8d315daf3fdd7df742d}\label{class_graph_aff4d55ba6709d8d315daf3fdd7df742d} 
+void {\bfseries set\+Maxflow} (double max\+Flow)
+\item 
+\Hypertarget{class_graph_a4abb55a0bafe1ae0cf78c3976f677de5}\label{class_graph_a4abb55a0bafe1ae0cf78c3976f677de5} 
+double {\bfseries get\+Total\+Demand} () const
+\item 
+\Hypertarget{class_graph_a374052fc15051eb9db1a9d169d55ec3a}\label{class_graph_a374052fc15051eb9db1a9d169d55ec3a} 
+void {\bfseries set\+Total\+Demand} (double total\+Demand)
+\item 
+\Hypertarget{class_graph_a5b6a2c1c86c721b03cea41fb27593e1f}\label{class_graph_a5b6a2c1c86c721b03cea41fb27593e1f} 
+double {\bfseries get\+Avg\+Cap\+Flow\+Dif} () const
+\item 
+\Hypertarget{class_graph_a865456a0dd45bfceb52f3ae4bb7785c8}\label{class_graph_a865456a0dd45bfceb52f3ae4bb7785c8} 
+void {\bfseries set\+Avg\+Cap\+Flow\+Dif} (double avg\+Cap\+Flow\+Dif)
+\item 
+\Hypertarget{class_graph_ab2ef004660403e140905b1dc48cc32b5}\label{class_graph_ab2ef004660403e140905b1dc48cc32b5} 
+std\+::vector$<$ std\+::string $>$ {\bfseries dfs} () const
+\item 
+\Hypertarget{class_graph_a26d8cf8644a5fb66b7ffbd3048dfa91d}\label{class_graph_a26d8cf8644a5fb66b7ffbd3048dfa91d} 
+std\+::vector$<$ std\+::string $>$ {\bfseries dfs} (const std\+::string \&source) const
+\item 
+\Hypertarget{class_graph_a9aa7030d1b4506f741b1be6f1f63d750}\label{class_graph_a9aa7030d1b4506f741b1be6f1f63d750} 
+void {\bfseries dfs\+Visit} (\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}v, std\+::vector$<$ std\+::string $>$ \&res) const
+\item 
+\Hypertarget{class_graph_aad836878c2271813e2d090639b78cbac}\label{class_graph_aad836878c2271813e2d090639b78cbac} 
+std\+::vector$<$ std\+::string $>$ {\bfseries bfs} (const std\+::string \&source) const
+\item 
+\Hypertarget{class_graph_a4c636eb91a3e8e51c4fdc02734bbed79}\label{class_graph_a4c636eb91a3e8e51c4fdc02734bbed79} 
+bool {\bfseries is\+DAG} () const
+\item 
+\Hypertarget{class_graph_a03ef8f6e2f6ecbecc6068a5a5dc1f7c7}\label{class_graph_a03ef8f6e2f6ecbecc6068a5a5dc1f7c7} 
+bool {\bfseries dfs\+Is\+DAG} (\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}v) const
+\item 
+\Hypertarget{class_graph_a75c1d0ec4057b480569ee5104ffd9be7}\label{class_graph_a75c1d0ec4057b480569ee5104ffd9be7} 
+std\+::vector$<$ std\+::string $>$ {\bfseries topsort} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_graph_abe1bd92669984d515490aa8a700a4c4b}\label{class_graph_abe1bd92669984d515490aa8a700a4c4b} 
+int {\bfseries find\+Vertex\+Index} (const std\+::string \&code) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_graph_aa9b0a6d8ad43c5eabaca5a7140bcc8b6}\label{class_graph_aa9b0a6d8ad43c5eabaca5a7140bcc8b6} 
+std\+::vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries vertex\+Set}
+\item 
+\Hypertarget{class_graph_a99d7668e2dc3cb18ebf5128dc3f36814}\label{class_graph_a99d7668e2dc3cb18ebf5128dc3f36814} 
+double {\bfseries max\+Flow}
+\item 
+\Hypertarget{class_graph_a12a9fc7248e880b3488a56e72adb9b87}\label{class_graph_a12a9fc7248e880b3488a56e72adb9b87} 
+double {\bfseries total\+Demand}
+\item 
+\Hypertarget{class_graph_aec353fa0b48a7968683c6a307c30b75e}\label{class_graph_aec353fa0b48a7968683c6a307c30b75e} 
+double {\bfseries avg\+Cap\+Flow\+Dif}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/diogo/code/da/da-\/water-\/supply/Graph.\+h\item 
+C\+:/\+Users/diogo/code/da/da-\/water-\/supply/Graph.\+cpp\end{DoxyCompactItemize}

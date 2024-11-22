@@ -1,0 +1,99 @@
+\doxysection{Menu Class Reference}
+\hypertarget{class_menu}{}\label{class_menu}\index{Menu@{Menu}}
+
+
+The \doxylink{class_menu}{Menu} class represents the interface of the application.  
+
+
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_menu_ad191c3c649b4680f33426d5e6b96eb15}{clear\+Terminal}} ()
+\begin{DoxyCompactList}\small\item\em Clears the terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a35656cd130e24d69383a5c9d0a73a38c}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs the main menu loop. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_menu_a36e85277fd1c434eaae73d60f697e888}{process\+Input}} (const std\+::string input)
+\begin{DoxyCompactList}\small\item\em Converts user input from string to integer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_ab502e118865574369fd10b11641ec797}{repeat\+Last\+Function}} ()
+\begin{DoxyCompactList}\small\item\em Repeats the last executed menu function or returns to the main menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_menu}{Menu} class represents the interface of the application. 
+
+This class provides functionality to enable interaction between the user and the application. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_menu_ad191c3c649b4680f33426d5e6b96eb15}\index{Menu@{Menu}!clearTerminal@{clearTerminal}}
+\index{clearTerminal@{clearTerminal}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{clearTerminal()}{clearTerminal()}}
+{\footnotesize\ttfamily \label{class_menu_ad191c3c649b4680f33426d5e6b96eb15} 
+void Menu\+::clear\+Terminal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears the terminal. 
+
+Uses the platform-\/specific command to clear the terminal.
+
+\begin{DoxyNote}{Note}
+If the execution of the commands fails it outputs multiple newline characters. 
+\end{DoxyNote}
+\Hypertarget{class_menu_a36e85277fd1c434eaae73d60f697e888}\index{Menu@{Menu}!processInput@{processInput}}
+\index{processInput@{processInput}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
+{\footnotesize\ttfamily \label{class_menu_a36e85277fd1c434eaae73d60f697e888} 
+int Menu\+::process\+Input (\begin{DoxyParamCaption}\item[{const std\+::string}]{input}{}\end{DoxyParamCaption})}
+
+
+
+Converts user input from string to integer. 
+
+This function only allows the conversion of numbers from 0 to 99, inclusive.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The user input string to process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer representing the processed input option, or -\/1 if the input is invalid.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Relies on std\+::stoi for string-\/to-\/integer conversion. 
+\end{DoxyNote}
+\Hypertarget{class_menu_ab502e118865574369fd10b11641ec797}\index{Menu@{Menu}!repeatLastFunction@{repeatLastFunction}}
+\index{repeatLastFunction@{repeatLastFunction}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{repeatLastFunction()}{repeatLastFunction()}}
+{\footnotesize\ttfamily \label{class_menu_ab502e118865574369fd10b11641ec797} 
+void Menu\+::repeat\+Last\+Function (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Repeats the last executed menu function or returns to the main menu. 
+
+This function prompts the user to choose weather to repeat the last executed function or to go back to the main menu. Allows for faster repetitions of the same function.
+
+\begin{DoxyNote}{Note}
+The last executed function is stored as a function pointer in \textquotesingle{}curr\+Function\textquotesingle{}. 
+\end{DoxyNote}
+\Hypertarget{class_menu_a35656cd130e24d69383a5c9d0a73a38c}\index{Menu@{Menu}!run@{run}}
+\index{run@{run}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_menu_a35656cd130e24d69383a5c9d0a73a38c} 
+void Menu\+::run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Runs the main menu loop. 
+
+This function continuously displays the main menu, processes user input, and performs corresponding actions until the user chooses to exit by entering 0. The function chosen by the user is stored using a function pointer to enable simpler repetition if desired. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/diogo/code/da/da-\/water-\/supply/Menu.\+h\item 
+C\+:/\+Users/diogo/code/da/da-\/water-\/supply/Menu.\+cpp\end{DoxyCompactItemize}

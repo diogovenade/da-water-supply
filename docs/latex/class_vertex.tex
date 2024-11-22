@@ -1,0 +1,194 @@
+\doxysection{Vertex Class Reference}
+\hypertarget{class_vertex}{}\label{class_vertex}\index{Vertex@{Vertex}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_vertex_aa80ad866c4638dd0d1adadd7c8be6adb}\label{class_vertex_aa80ad866c4638dd0d1adadd7c8be6adb} 
+{\bfseries Vertex} (std\+::string c)
+\item 
+\Hypertarget{class_vertex_a89a00554f777a1dfdd8797b822d308bc}\label{class_vertex_a89a00554f777a1dfdd8797b822d308bc} 
+std\+::string {\bfseries get\+Code} () const
+\item 
+\Hypertarget{class_vertex_acb91776cfec5bfe238af77f2b5fb6b9f}\label{class_vertex_acb91776cfec5bfe238af77f2b5fb6b9f} 
+std\+::string {\bfseries get\+Type} () const
+\item 
+\Hypertarget{class_vertex_a75b6b4a4afc26affea59fdae48aa30b1}\label{class_vertex_a75b6b4a4afc26affea59fdae48aa30b1} 
+int {\bfseries get\+Id} () const
+\item 
+\Hypertarget{class_vertex_abb430e413ce9430fedd322af73955a6e}\label{class_vertex_abb430e413ce9430fedd322af73955a6e} 
+std\+::vector$<$ \mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+Adj} ()
+\item 
+\Hypertarget{class_vertex_aa4bd82105b85ee53a917391f4811cd8a}\label{class_vertex_aa4bd82105b85ee53a917391f4811cd8a} 
+bool {\bfseries is\+Visited} () const
+\item 
+\Hypertarget{class_vertex_a126e306f0534b99cd97aa864fdb243d4}\label{class_vertex_a126e306f0534b99cd97aa864fdb243d4} 
+bool {\bfseries is\+Processing} () const
+\item 
+\Hypertarget{class_vertex_ad7348af9376d4b9ada5ceeca3bd1b2b7}\label{class_vertex_ad7348af9376d4b9ada5ceeca3bd1b2b7} 
+unsigned int {\bfseries get\+Indegree} () const
+\item 
+\Hypertarget{class_vertex_aa36ca926de23a6e7283be42e2930957c}\label{class_vertex_aa36ca926de23a6e7283be42e2930957c} 
+double {\bfseries get\+Dist} () const
+\item 
+\Hypertarget{class_vertex_a6e120e57da6af94892fae44e05868794}\label{class_vertex_a6e120e57da6af94892fae44e05868794} 
+\mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Path} () const
+\item 
+\Hypertarget{class_vertex_a84b20dae22321e5a729606885357b015}\label{class_vertex_a84b20dae22321e5a729606885357b015} 
+std\+::vector$<$ \mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+Incoming} () const
+\item 
+\Hypertarget{class_vertex_a196e44cb39f779bee15d1cab5e62b2f2}\label{class_vertex_a196e44cb39f779bee15d1cab5e62b2f2} 
+void {\bfseries set\+Code} (std\+::string code)
+\item 
+\Hypertarget{class_vertex_a0b766cc3ce251348af422c0773bb4359}\label{class_vertex_a0b766cc3ce251348af422c0773bb4359} 
+void {\bfseries set\+Id} (int id)
+\item 
+\Hypertarget{class_vertex_a15eeabbbb6d517af746ae137c6d5b595}\label{class_vertex_a15eeabbbb6d517af746ae137c6d5b595} 
+void {\bfseries set\+Visited} (bool visited)
+\item 
+\Hypertarget{class_vertex_a1c93b166281b30db2edef03791748ace}\label{class_vertex_a1c93b166281b30db2edef03791748ace} 
+void {\bfseries set\+Processsing} (bool processing)
+\item 
+\Hypertarget{class_vertex_aeb605d2ba9296a5e40496a9e37557d03}\label{class_vertex_aeb605d2ba9296a5e40496a9e37557d03} 
+void {\bfseries set\+Indegree} (unsigned int indegree)
+\item 
+\Hypertarget{class_vertex_a6939bef79bfe5fe5bf77d9fd1bd70085}\label{class_vertex_a6939bef79bfe5fe5bf77d9fd1bd70085} 
+void {\bfseries set\+Dist} (double dist)
+\item 
+\Hypertarget{class_vertex_abe4bc30005eec65e775d0cd51f456460}\label{class_vertex_abe4bc30005eec65e775d0cd51f456460} 
+void {\bfseries set\+Path} (\mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*}path)
+\item 
+\Hypertarget{class_vertex_a582ef3e1382ffb5ab897ba03ca6ff90c}\label{class_vertex_a582ef3e1382ffb5ab897ba03ca6ff90c} 
+\mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*} {\bfseries add\+Edge} (\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}dest, int capacity)
+\item 
+\Hypertarget{class_vertex_a9ddabb24cb8b395a803ecd9c08c35a92}\label{class_vertex_a9ddabb24cb8b395a803ecd9c08c35a92} 
+bool {\bfseries remove\+Edge} (std\+::string code)
+\item 
+\Hypertarget{class_vertex_afcde6d707aff7627df7adde8d8b74a89}\label{class_vertex_afcde6d707aff7627df7adde8d8b74a89} 
+void {\bfseries remove\+Outgoing\+Edges} ()
+\item 
+\Hypertarget{class_vertex_a42e333583f880d7f9e0be379b280a26d}\label{class_vertex_a42e333583f880d7f9e0be379b280a26d} 
+void {\bfseries set\+Reservoir\+Data} (std\+::string reservoir, std\+::string municipality, int max\+Delivery)
+\item 
+\Hypertarget{class_vertex_a9264a593ca889b227956f30eca6ca31c}\label{class_vertex_a9264a593ca889b227956f30eca6ca31c} 
+std\+::string {\bfseries get\+Reservoir} () const
+\item 
+\Hypertarget{class_vertex_a72cabbe71318b26964e0f6d3cf0fb96b}\label{class_vertex_a72cabbe71318b26964e0f6d3cf0fb96b} 
+std\+::string {\bfseries get\+Municipality} () const
+\item 
+\Hypertarget{class_vertex_a5b479f14bc4ca0ec99111e4abe3bca64}\label{class_vertex_a5b479f14bc4ca0ec99111e4abe3bca64} 
+int {\bfseries get\+Max\+Delivery} () const
+\item 
+\Hypertarget{class_vertex_a00dc2475fa8e96ec0eff4f8061397a15}\label{class_vertex_a00dc2475fa8e96ec0eff4f8061397a15} 
+int {\bfseries get\+Curr\+Delivery} () const
+\item 
+\Hypertarget{class_vertex_a7cfdbe98789a7af7a5645e8e4968e7d2}\label{class_vertex_a7cfdbe98789a7af7a5645e8e4968e7d2} 
+void {\bfseries set\+City\+Data} (std\+::string city, double demand, int population)
+\item 
+\Hypertarget{class_vertex_aae21e5022c68f98e154d8e4f0af38b64}\label{class_vertex_aae21e5022c68f98e154d8e4f0af38b64} 
+void {\bfseries set\+Supply\+Deficit} (int supply\+Deficit)
+\item 
+\Hypertarget{class_vertex_a17a4a815ce1a0ca94c6472cc2756fe15}\label{class_vertex_a17a4a815ce1a0ca94c6472cc2756fe15} 
+void {\bfseries set\+Max\+Flow} (double max\+Flow)
+\item 
+\Hypertarget{class_vertex_ad27df072743aabd83217cabdcc192f7d}\label{class_vertex_ad27df072743aabd83217cabdcc192f7d} 
+void {\bfseries set\+Temp\+Flow} (double temp\+Flow)
+\item 
+\Hypertarget{class_vertex_a8283a8eb5e4b3a34175968d361ee4820}\label{class_vertex_a8283a8eb5e4b3a34175968d361ee4820} 
+std\+::string {\bfseries get\+City} () const
+\item 
+\Hypertarget{class_vertex_ab86cba89fe67cdcd89dd965d125ad5c8}\label{class_vertex_ab86cba89fe67cdcd89dd965d125ad5c8} 
+double {\bfseries get\+Demand} () const
+\item 
+\Hypertarget{class_vertex_a05066fd53daf1b591bc6d69611586728}\label{class_vertex_a05066fd53daf1b591bc6d69611586728} 
+void {\bfseries set\+Demand} (double demand)
+\item 
+\Hypertarget{class_vertex_af1b23cc050c9fdac1ae3cfec4e24efdb}\label{class_vertex_af1b23cc050c9fdac1ae3cfec4e24efdb} 
+int {\bfseries get\+Population} () const
+\item 
+\Hypertarget{class_vertex_a60c4d722f848ef304e9d2dd2cf03d078}\label{class_vertex_a60c4d722f848ef304e9d2dd2cf03d078} 
+double {\bfseries get\+Curr\+Flow} () const
+\item 
+\Hypertarget{class_vertex_ac73c52c7043f92332100d36e7380234f}\label{class_vertex_ac73c52c7043f92332100d36e7380234f} 
+int {\bfseries get\+Supply\+Deficit} () const
+\item 
+\Hypertarget{class_vertex_a0b5b4a82b5628f43c4c5d79c23ed3a1a}\label{class_vertex_a0b5b4a82b5628f43c4c5d79c23ed3a1a} 
+double {\bfseries get\+Max\+Flow} () const
+\item 
+\Hypertarget{class_vertex_afdecf73b398904dc63d6117955070920}\label{class_vertex_afdecf73b398904dc63d6117955070920} 
+double {\bfseries get\+Temp\+Flow} () const
+\item 
+\Hypertarget{class_vertex_a80a54a84866d511b63bcc6f38899bed9}\label{class_vertex_a80a54a84866d511b63bcc6f38899bed9} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_vertex}{Vertex}} \&other) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_vertex_ac2a80daa5a6a208173f55d4d161334f1}\label{class_vertex_ac2a80daa5a6a208173f55d4d161334f1} 
+void {\bfseries delete\+Edge} (\mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*}edge)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_vertex_a0291c0ebdee9d12acd1d19e73c27d1df}\label{class_vertex_a0291c0ebdee9d12acd1d19e73c27d1df} 
+std\+::string {\bfseries code}
+\item 
+\Hypertarget{class_vertex_a2e69697726190f50c7fc040fb1ddac7a}\label{class_vertex_a2e69697726190f50c7fc040fb1ddac7a} 
+int {\bfseries id}
+\item 
+\Hypertarget{class_vertex_a8e2eb1c5bf923165179ff9d8b4f29349}\label{class_vertex_a8e2eb1c5bf923165179ff9d8b4f29349} 
+std\+::vector$<$ \mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries adj}
+\item 
+\Hypertarget{class_vertex_aaef9f7de91b4b8f1752d391a1aae9c2e}\label{class_vertex_aaef9f7de91b4b8f1752d391a1aae9c2e} 
+bool {\bfseries visited} = false
+\item 
+\Hypertarget{class_vertex_a305dc8fcad6e4c7ef2491409ca7ddaa4}\label{class_vertex_a305dc8fcad6e4c7ef2491409ca7ddaa4} 
+bool {\bfseries processing} = false
+\item 
+\Hypertarget{class_vertex_a94ae99aae9b1a426feda5ecda70c598b}\label{class_vertex_a94ae99aae9b1a426feda5ecda70c598b} 
+unsigned int {\bfseries indegree}
+\item 
+\Hypertarget{class_vertex_a11d98611f5101fe7f46785d8b9c53f44}\label{class_vertex_a11d98611f5101fe7f46785d8b9c53f44} 
+double {\bfseries dist} = 0
+\item 
+\Hypertarget{class_vertex_a4e83821f961f6eb63ad210260ba0e1e2}\label{class_vertex_a4e83821f961f6eb63ad210260ba0e1e2} 
+\mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*} {\bfseries path} = nullptr
+\item 
+\Hypertarget{class_vertex_a2d41654d7aee77d99edacca6a923f4ee}\label{class_vertex_a2d41654d7aee77d99edacca6a923f4ee} 
+std\+::vector$<$ \mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries incoming}
+\item 
+\Hypertarget{class_vertex_a72fa377971de18b02f17a9615d0213ac}\label{class_vertex_a72fa377971de18b02f17a9615d0213ac} 
+std\+::string {\bfseries reservoir}
+\item 
+\Hypertarget{class_vertex_a2e791a46d0f4bc179bac1fcda4a68a05}\label{class_vertex_a2e791a46d0f4bc179bac1fcda4a68a05} 
+std\+::string {\bfseries municipality}
+\item 
+\Hypertarget{class_vertex_a2d114f4439ffee3edc7fb6188434420f}\label{class_vertex_a2d114f4439ffee3edc7fb6188434420f} 
+int {\bfseries max\+Delivery}
+\item 
+\Hypertarget{class_vertex_aa686880728f956b1e23f9f144bd5d5e7}\label{class_vertex_aa686880728f956b1e23f9f144bd5d5e7} 
+std\+::string {\bfseries city}
+\item 
+\Hypertarget{class_vertex_ae2e48b88e718b337eb84b2482ecb78ac}\label{class_vertex_ae2e48b88e718b337eb84b2482ecb78ac} 
+double {\bfseries demand}
+\item 
+\Hypertarget{class_vertex_a59e05027f0ec5a15a57b9dcd4a4e8afc}\label{class_vertex_a59e05027f0ec5a15a57b9dcd4a4e8afc} 
+int {\bfseries population}
+\item 
+\Hypertarget{class_vertex_a9290dc7eac1caa1befc3606122398226}\label{class_vertex_a9290dc7eac1caa1befc3606122398226} 
+int {\bfseries supply\+Deficit}
+\item 
+\Hypertarget{class_vertex_aa20962bb527043865bd6d3f53c76ad22}\label{class_vertex_aa20962bb527043865bd6d3f53c76ad22} 
+double {\bfseries max\+Flow}
+\item 
+\Hypertarget{class_vertex_a77a11828997f91cbe27aa9b932e7ba55}\label{class_vertex_a77a11828997f91cbe27aa9b932e7ba55} 
+double {\bfseries temp\+Flow}
+\item 
+\Hypertarget{class_vertex_a1e6e7e8cf460c6255bf7705a6927ba90}\label{class_vertex_a1e6e7e8cf460c6255bf7705a6927ba90} 
+double {\bfseries delivery\+Capacity}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/diogo/code/da/da-\/water-\/supply/Graph.\+h\item 
+C\+:/\+Users/diogo/code/da/da-\/water-\/supply/Graph.\+cpp\end{DoxyCompactItemize}

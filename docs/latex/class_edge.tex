@@ -1,0 +1,74 @@
+\doxysection{Edge Class Reference}
+\hypertarget{class_edge}{}\label{class_edge}\index{Edge@{Edge}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_edge_a7aa0f8b4e386e6681adf083497dac128}\label{class_edge_a7aa0f8b4e386e6681adf083497dac128} 
+{\bfseries Edge} (\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}orig, \mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}dest, int capacity)
+\item 
+\Hypertarget{class_edge_a5cda44e9ba257b03963a1ac301371a59}\label{class_edge_a5cda44e9ba257b03963a1ac301371a59} 
+\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Dest} () const
+\item 
+\Hypertarget{class_edge_a225e92785fb02e0e985e19fe3346686b}\label{class_edge_a225e92785fb02e0e985e19fe3346686b} 
+int {\bfseries get\+Capacity} () const
+\item 
+\Hypertarget{class_edge_a52967cf488bb7185a512cd111420215d}\label{class_edge_a52967cf488bb7185a512cd111420215d} 
+bool {\bfseries is\+Selected} () const
+\item 
+\Hypertarget{class_edge_a6e8b08e91c0694b40edff0432fb612eb}\label{class_edge_a6e8b08e91c0694b40edff0432fb612eb} 
+\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Orig} () const
+\item 
+\Hypertarget{class_edge_a756d2d246aa5445d0f396626c7d4fd56}\label{class_edge_a756d2d246aa5445d0f396626c7d4fd56} 
+\mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Reverse} () const
+\item 
+\Hypertarget{class_edge_a30ff9f3127097db8dce20f5e8b15e6dc}\label{class_edge_a30ff9f3127097db8dce20f5e8b15e6dc} 
+double {\bfseries get\+Flow} () const
+\item 
+\Hypertarget{class_edge_a8ab1cf2fe7fd16152d1dba3822853894}\label{class_edge_a8ab1cf2fe7fd16152d1dba3822853894} 
+void {\bfseries set\+Selected} (bool selected)
+\item 
+\Hypertarget{class_edge_a64881280015bd83702fe3b2c6234b7e5}\label{class_edge_a64881280015bd83702fe3b2c6234b7e5} 
+void {\bfseries set\+Reverse} (\mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*}reverse)
+\item 
+\Hypertarget{class_edge_a788cfe1f98772af4e7bbfe6310d0ccaa}\label{class_edge_a788cfe1f98772af4e7bbfe6310d0ccaa} 
+void {\bfseries set\+Flow} (double flow)
+\item 
+\Hypertarget{class_edge_a8e0f0c2e2720d76b1f1f765e4fba8405}\label{class_edge_a8e0f0c2e2720d76b1f1f765e4fba8405} 
+void {\bfseries set\+Capacity} (int capacity)
+\item 
+\Hypertarget{class_edge_a6d50cbfa9044d957602aec2f43f7bac5}\label{class_edge_a6d50cbfa9044d957602aec2f43f7bac5} 
+bool {\bfseries is\+Analyzed} () const
+\item 
+\Hypertarget{class_edge_ae07a2273c6a5a2d6334930e1a5e095e6}\label{class_edge_ae07a2273c6a5a2d6334930e1a5e095e6} 
+void {\bfseries set\+Analyzed} (bool analyzed)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_edge_a50339c1a85710ca827d4e3865727ffd7}\label{class_edge_a50339c1a85710ca827d4e3865727ffd7} 
+\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} {\bfseries dest}
+\item 
+\Hypertarget{class_edge_ad606e57bc68898672de1727e299a7d65}\label{class_edge_ad606e57bc68898672de1727e299a7d65} 
+int {\bfseries capacity}
+\item 
+\Hypertarget{class_edge_a3af6d278c4ddcb2589e1aa66e52f4efb}\label{class_edge_a3af6d278c4ddcb2589e1aa66e52f4efb} 
+bool {\bfseries selected} = false
+\item 
+\Hypertarget{class_edge_a48f1521d20ead8492fd1d184656862f5}\label{class_edge_a48f1521d20ead8492fd1d184656862f5} 
+\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} {\bfseries orig}
+\item 
+\Hypertarget{class_edge_abcadfaa8985d0d593a124d0fea39130a}\label{class_edge_abcadfaa8985d0d593a124d0fea39130a} 
+\mbox{\hyperlink{class_edge}{Edge}} \texorpdfstring{$\ast$}{*} {\bfseries reverse} = nullptr
+\item 
+\Hypertarget{class_edge_adbe59333b5a49cbb85b39ce1272e6098}\label{class_edge_adbe59333b5a49cbb85b39ce1272e6098} 
+double {\bfseries flow}
+\item 
+\Hypertarget{class_edge_a8d647e03f0232bee76c36b1407568047}\label{class_edge_a8d647e03f0232bee76c36b1407568047} 
+bool {\bfseries analyzed}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/diogo/code/da/da-\/water-\/supply/Graph.\+h\item 
+C\+:/\+Users/diogo/code/da/da-\/water-\/supply/Graph.\+cpp\end{DoxyCompactItemize}

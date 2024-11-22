@@ -1,0 +1,22 @@
+\doxysection{C\+:/\+Users/diogo/code/da/da-\/water-\/supply/\+Csv.h}
+\hypertarget{_csv_8h_source}{}\label{_csv_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DA2024\_PRJ1\_G85\_CSV\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DA2024\_PRJ1\_G85\_CSV\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Graph.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ std::unordered\_map<std::string,\ Vertex*>\ csvReservoir(\mbox{\hyperlink{class_graph}{Graph}}\&\ graph,\ \textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00010\ std::unordered\_map<std::string,\ Vertex*>\ csvStations(\mbox{\hyperlink{class_graph}{Graph}}\&\ graph,\ \textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00011\ std::unordered\_map<std::string,\ Vertex*>\ csvCities(\mbox{\hyperlink{class_graph}{Graph}}\&\ graph,\ \textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{void}\ csvPipes(std::unordered\_map<std::string,\ Vertex*>\ reservoirs,}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ Vertex*>\ stations,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ Vertex*>\ cities,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DA2024\_PRJ1\_G85\_CSV\_H}}
+
+\end{DoxyCode}

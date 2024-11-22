@@ -1,0 +1,46 @@
+\doxysection{C\+:/\+Users/diogo/code/da/da-\/water-\/supply/\+Application.h}
+\hypertarget{_application_8h_source}{}\label{_application_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DA2024\_PRJ1\_G85\_APPLICATION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DA2024\_PRJ1\_G85\_APPLICATION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Csv.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_application}{Application}}\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_application}{Application}}();\ \textcolor{comment}{//\ parse\ data}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{void}\ testData();\ \textcolor{comment}{//\ para\ testar\ se\ o\ parse\ foi\ feito\ corretamente}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_application_a1ac12d8b8ee7c2b85406c5618e8f1833}{edmondsKarp}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_application_a165c857d0a5f9974e35da6f72de24105}{removeReservoir}}(\textcolor{keyword}{const}\ std::string\&\ code);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_application_a9bc119cf30ace464436488182890250d}{removePumpingStation}}(\textcolor{keyword}{const}\ std::string\&\ code);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_application_a60cba6a7600421424b709dfe0e35dc17}{removePipeline}}(\textcolor{keyword}{const}\ std::pair<std::string,\ std::string>\&\ pipe);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ pipesStats();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00074\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_application_a0f2b6be863baf4acd440712ef292b09a}{waterDeficitStats}}(std::string\ in)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_application_ac6d98e1681d5b8933e349875c39ab76d}{balanceFlow}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ *\ getGraph()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ \ \ \ \ std::unordered\_map<std::string,\ Vertex*>\ getCities()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ *graph;\ \textcolor{comment}{//\ mapa}}
+\DoxyCodeLine{00091\ \ \ \ \ std::unordered\_map<std::string,\ Vertex*>\ reservoirs;}
+\DoxyCodeLine{00092\ \ \ \ \ std::unordered\_map<std::string,\ Vertex*>\ stations;}
+\DoxyCodeLine{00093\ \ \ \ \ std::unordered\_map<std::string,\ Vertex*>\ cities;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ findAugmentingPath(\mbox{\hyperlink{class_vertex}{Vertex}}\ *superSource,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *sink);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{double}\ findMinResidualAlongPath(\mbox{\hyperlink{class_vertex}{Vertex}}\ *superSource,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *sink);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ augmentFlowAlongPath(\mbox{\hyperlink{class_vertex}{Vertex}}\ *source,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *sink,\ \textcolor{keywordtype}{double}\ f);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ balanceFlowAux(\mbox{\hyperlink{class_edge}{Edge}}\ *e);}
+\DoxyCodeLine{00152\ \};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DA2024\_PRJ1\_G85\_APPLICATION\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,147 @@
+\doxysection{Application Class Reference}
+\hypertarget{class_application}{}\label{class_application}\index{Application@{Application}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_application_a5a7e80ee0aaaf0cc5a8471d3b107f2e8}\label{class_application_a5a7e80ee0aaaf0cc5a8471d3b107f2e8} 
+void {\bfseries test\+Data} ()
+\item 
+void \mbox{\hyperlink{class_application_a1ac12d8b8ee7c2b85406c5618e8f1833}{edmonds\+Karp}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the max-\/\+Flow of the network. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_application_a165c857d0a5f9974e35da6f72de24105}{remove\+Reservoir}} (const std\+::string \&code)
+\begin{DoxyCompactList}\small\item\em Removes a reservoir from the water supply network. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_application_a9bc119cf30ace464436488182890250d}{remove\+Pumping\+Station}} (const std\+::string \&code)
+\begin{DoxyCompactList}\small\item\em Removes a pumping station from the water supply network. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_application_a60cba6a7600421424b709dfe0e35dc17}{remove\+Pipeline}} (const std\+::pair$<$ std\+::string, std\+::string $>$ \&pipe)
+\begin{DoxyCompactList}\small\item\em Removes a pipeline from the water supply network. \end{DoxyCompactList}\item 
+\Hypertarget{class_application_ade6a2f166a66876e47d831b1383c62e8}\label{class_application_ade6a2f166a66876e47d831b1383c62e8} 
+void {\bfseries pipes\+Stats} ()
+\item 
+void \mbox{\hyperlink{class_application_a0f2b6be863baf4acd440712ef292b09a}{water\+Deficit\+Stats}} (std\+::string in) const
+\begin{DoxyCompactList}\small\item\em Displays the water deficit of each city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_application_ac6d98e1681d5b8933e349875c39ab76d}{balance\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em Calls the auxiliary function for all edges of the graph. \end{DoxyCompactList}\item 
+\Hypertarget{class_application_aab405924b8be6083ff5b3c6faf72a2f0}\label{class_application_aab405924b8be6083ff5b3c6faf72a2f0} 
+\mbox{\hyperlink{class_graph}{Graph}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Graph} () const
+\item 
+\Hypertarget{class_application_a1a4c68bb6d5a68c554926fd99369b3dd}\label{class_application_a1a4c68bb6d5a68c554926fd99369b3dd} 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+Cities} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_application_ac6d98e1681d5b8933e349875c39ab76d}\index{Application@{Application}!balanceFlow@{balanceFlow}}
+\index{balanceFlow@{balanceFlow}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{balanceFlow()}{balanceFlow()}}
+{\footnotesize\ttfamily \label{class_application_ac6d98e1681d5b8933e349875c39ab76d} 
+void Application\+::balance\+Flow (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calls the auxiliary function for all edges of the graph. 
+
+The function calls the pipes\+Stats function, in order to determine if there was a change in the statistics of the graph.
+
+{\bfseries{Complexity}}\+: O(\+E\texorpdfstring{$^\wedge$}{\string^}2), in which E is the number of edges in the graph. \Hypertarget{class_application_a1ac12d8b8ee7c2b85406c5618e8f1833}\index{Application@{Application}!edmondsKarp@{edmondsKarp}}
+\index{edmondsKarp@{edmondsKarp}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{edmondsKarp()}{edmondsKarp()}}
+{\footnotesize\ttfamily \label{class_application_a1ac12d8b8ee7c2b85406c5618e8f1833} 
+void Application\+::edmonds\+Karp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the max-\/\+Flow of the network. 
+
+This function finds the maximum flow from a source node to a sink node in a flow network, the algorithm performs a bfs to find augmenting paths, finds the bottleneck of each path and increments the flow while there are still available paths. Max-\/flow and water supply deficit is stored on each city.
+
+{\bfseries{Complexity}}\+: O(\+V \texorpdfstring{$\ast$}{*} E\texorpdfstring{$^\wedge$}{\string^}2), where V is the number of vertice and E the number of Edges. \Hypertarget{class_application_a60cba6a7600421424b709dfe0e35dc17}\index{Application@{Application}!removePipeline@{removePipeline}}
+\index{removePipeline@{removePipeline}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{removePipeline()}{removePipeline()}}
+{\footnotesize\ttfamily \label{class_application_a60cba6a7600421424b709dfe0e35dc17} 
+bool Application\+::remove\+Pipeline (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ std\+::string, std\+::string $>$ \&}]{pipe}{}\end{DoxyParamCaption})}
+
+
+
+Removes a pipeline from the water supply network. 
+
+This function removes a pipeline from the water supply network based on the provided source and destination codes and re-\/runs the Edmonds-\/\+Karp algorithm to see if any city was affected by the removal. The removal is done by setting the capacity of the pipeline to 0. If the pipeline is bidirectional, the same is done in the other direction.
+
+{\bfseries{Complexity}}\+: O(\+V \texorpdfstring{$\ast$}{*} E\texorpdfstring{$^\wedge$}{\string^}2), which is the complexity of Edmonds-\/\+Karp.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipe} & A pair of codes of the source and destination vertices. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the pipeline is successfully removed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_application_a9bc119cf30ace464436488182890250d}\index{Application@{Application}!removePumpingStation@{removePumpingStation}}
+\index{removePumpingStation@{removePumpingStation}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{removePumpingStation()}{removePumpingStation()}}
+{\footnotesize\ttfamily \label{class_application_a9bc119cf30ace464436488182890250d} 
+bool Application\+::remove\+Pumping\+Station (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code}{}\end{DoxyParamCaption})}
+
+
+
+Removes a pumping station from the water supply network. 
+
+This function removes a pumping station from the water supply network based on the provided pumping station code and re-\/runs the Edmonds-\/\+Karp algorithm to see if any city was affected by the removal.
+
+{\bfseries{Complexity}}\+: O(\+V \texorpdfstring{$\ast$}{*} E\texorpdfstring{$^\wedge$}{\string^}2), which is the complexity of Edmonds-\/\+Karp.
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The code of the pumping station to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the pumping station is successfully removed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_application_a165c857d0a5f9974e35da6f72de24105}\index{Application@{Application}!removeReservoir@{removeReservoir}}
+\index{removeReservoir@{removeReservoir}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{removeReservoir()}{removeReservoir()}}
+{\footnotesize\ttfamily \label{class_application_a165c857d0a5f9974e35da6f72de24105} 
+bool Application\+::remove\+Reservoir (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code}{}\end{DoxyParamCaption})}
+
+
+
+Removes a reservoir from the water supply network. 
+
+This function removes a reservoir from the water supply network based on the provided reservoir code and re-\/runs the Edmonds-\/\+Karp algorithm to see if any city was affected by the removal.
+
+{\bfseries{Complexity}}\+: O(\+V \texorpdfstring{$\ast$}{*} E\texorpdfstring{$^\wedge$}{\string^}2), which is the complexity of Edmonds-\/\+Karp.
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The code of the reservoir to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the reservoir is successfully removed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_application_a0f2b6be863baf4acd440712ef292b09a}\index{Application@{Application}!waterDeficitStats@{waterDeficitStats}}
+\index{waterDeficitStats@{waterDeficitStats}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{waterDeficitStats()}{waterDeficitStats()}}
+{\footnotesize\ttfamily \label{class_application_a0f2b6be863baf4acd440712ef292b09a} 
+void Application\+::water\+Deficit\+Stats (\begin{DoxyParamCaption}\item[{std\+::string}]{in}{}\end{DoxyParamCaption}) const}
+
+
+
+Displays the water deficit of each city. 
+
+Outputs statistics on water deficit for cities. If the user inputs \textquotesingle{}A\textquotesingle{} (case-\/insensitive), it prints the supply deficit for every city. If the user inputs \textquotesingle{}C\textquotesingle{} (case-\/insensitive), it prompts the user to input a city code and prints its supply statistics.
+
+{\bfseries{Complexity}}\+: O(n) where n is a city in cities map or O(1) if city specific
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & User input to choose all or city specific statistics. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/diogo/code/da/da-\/water-\/supply/Application.\+h\item 
+C\+:/\+Users/diogo/code/da/da-\/water-\/supply/Application.\+cpp\end{DoxyCompactItemize}

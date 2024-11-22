@@ -1,0 +1,166 @@
+\doxysection{C\+:/\+Users/diogo/code/da/da-\/water-\/supply/\+Graph.h}
+\hypertarget{_graph_8h_source}{}\label{_graph_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DA2024\_PRJ1\_G85\_GRAPH\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DA2024\_PRJ1\_G85\_GRAPH\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_edge}{Edge}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vertex}{Vertex}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}(std::string\ c);}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ getCode()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ getType()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ getId()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<Edge\ *>\ getAdj();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ isVisited()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ isProcessing()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ getIndegree()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ getDist()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_edge}{Edge}}\ *getPath()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ std::vector<Edge\ *>\ getIncoming()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ setCode(std::string\ code);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setId(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setVisited(\textcolor{keywordtype}{bool}\ visited);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ setProcesssing(\textcolor{keywordtype}{bool}\ processing);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ setIndegree(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ indegree);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ setDist(\textcolor{keywordtype}{double}\ dist);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ setPath(\mbox{\hyperlink{class_edge}{Edge}}\ *path);}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_edge}{Edge}}\ *\ addEdge(\mbox{\hyperlink{class_vertex}{Vertex}}*\ dest,\ \textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ removeEdge(std::string\ code);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ removeOutgoingEdges();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Reservoirs}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ setReservoirData(std::string\ reservoir,\ std::string\ municipality,\ \textcolor{keywordtype}{int}\ maxDelivery);}
+\DoxyCodeLine{00037\ \ \ \ \ std::string\ getReservoir()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ std::string\ getMunicipality()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ getMaxDelivery()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ getCurrDelivery()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Cities}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ setCityData(std::string\ city,\ \textcolor{keywordtype}{double}\ demand,\ \textcolor{keywordtype}{int}\ population);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ setSupplyDeficit(\textcolor{keywordtype}{int}\ supplyDeficit);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ setMaxFlow(\textcolor{keywordtype}{double}\ maxFlow);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ setTempFlow(\textcolor{keywordtype}{double}\ tempFlow);}
+\DoxyCodeLine{00047\ \ \ \ \ std::string\ getCity()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{double}\ getDemand()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ setDemand(\textcolor{keywordtype}{double}\ demand);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ getPopulation()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{double}\ getCurrFlow()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ getSupplyDeficit()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{double}\ getMaxFlow()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{double}\ getTempFlow()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vertex}{Vertex}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this-\/>code\ ==\ other.code);}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00062\ \ \ \ \ std::string\ code;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00064\ \ \ \ \ std::vector<Edge*>\ adj;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ visited\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ processing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ indegree;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{double}\ dist\ =\ 0;}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_edge}{Edge}}\ *path\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ std::vector<Edge\ *>\ incoming;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//\ Reservoirs}}
+\DoxyCodeLine{00075\ \ \ \ \ std::string\ reservoir;}
+\DoxyCodeLine{00076\ \ \ \ \ std::string\ municipality;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ maxDelivery;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//\ Cities}}
+\DoxyCodeLine{00080\ \ \ \ \ std::string\ city;}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{double}\ demand;}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ population;}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ supplyDeficit;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{double}\ maxFlow;}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{double}\ tempFlow;}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{double}\ deliveryCapacity;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ deleteEdge(\mbox{\hyperlink{class_edge}{Edge}}\ *edge);}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_edge}{Edge}}\ \{}
+\DoxyCodeLine{00092\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{class_edge}{Edge}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ *orig,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *dest,\ \textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *getDest()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ getCapacity()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{bool}\ isSelected()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *\ getOrig()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{class_edge}{Edge}}\ *getReverse()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{double}\ getFlow()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ setSelected(\textcolor{keywordtype}{bool}\ selected);}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ setReverse(\mbox{\hyperlink{class_edge}{Edge}}\ *reverse);}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ setFlow(\textcolor{keywordtype}{double}\ flow);}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ setCapacity(\textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ isAnalyzed()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ setAnalyzed(\textcolor{keywordtype}{bool}\ analyzed);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *\ dest;}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{bool}\ selected\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *orig;}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{class_edge}{Edge}}\ *reverse\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{double}\ flow;}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{bool}\ analyzed;}
+\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graph}{Graph}}\ \{}
+\DoxyCodeLine{00123\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_graph}{\string~Graph}}();}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *findVertex(\textcolor{keyword}{const}\ std::string\ \&code)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{bool}\ addVertex(\mbox{\hyperlink{class_vertex}{Vertex}}\ *vertex);}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{bool}\ removeVertex(\textcolor{keyword}{const}\ std::string\ code);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{bool}\ addEdge(\textcolor{keyword}{const}\ std::string\ \&source,\ \textcolor{keyword}{const}\ std::string\ \&dest,\ \textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{bool}\ removeEdge(\textcolor{keyword}{const}\ std::string\ \&source,\ \textcolor{keyword}{const}\ std::string\ \&dest);}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{bool}\ addBidirectionalEdge(\textcolor{keyword}{const}\ std::string\ \&source,\ \textcolor{keyword}{const}\ std::string\ \&dest,\ \textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{int}\ getNumVertex()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00134\ \ \ \ \ std::vector<Vertex\ *>\ getVertexSet()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{double}\ getMaxFlow()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ setMaxflow(\textcolor{keywordtype}{double}\ maxFlow);}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{double}\ getTotalDemand()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ setTotalDemand(\textcolor{keywordtype}{double}\ totalDemand);}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{double}\ getAvgCapFlowDif()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ setAvgCapFlowDif(\textcolor{keywordtype}{double}\ avgCapFlowDif);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ std::vector<std::string>\ dfs()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00144\ \ \ \ \ std::vector<std::string>\ dfs(\textcolor{keyword}{const}\ std::string\ \&\ source)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ dfsVisit(\mbox{\hyperlink{class_vertex}{Vertex}}\ *v,\ \ std::vector<std::string>\ \&\ res)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00146\ \ \ \ \ std::vector<std::string>\ bfs(\textcolor{keyword}{const}\ std::string\ \&\ source)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{bool}\ isDAG()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{bool}\ dfsIsDAG(\mbox{\hyperlink{class_vertex}{Vertex}}\ *v)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00150\ \ \ \ \ std::vector<std::string>\ topsort()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00153\ \ \ \ \ std::vector<Vertex\ *>\ vertexSet;}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{double}\ maxFlow;}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{double}\ totalDemand;}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{double}\ avgCapFlowDif;}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ findVertexIndex(\textcolor{keyword}{const}\ std::string\ \&code)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00159\ \};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#endif\ DA2024\_PRJ1\_G85\_GRAPH\_H}}
+
+\end{DoxyCode}
